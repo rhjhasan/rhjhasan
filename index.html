@@ -1,63 +1,856 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Pixy Hash</title>
-  
-<style>
-body {
-  height: 100vh;
-  width: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
 
-h3 svg {
-  width: 40em;
-}
+  <!DOCTYPE html>
 
-h3 svg path{
-  animation: fill 0.5s ease forwards 4s;
-}
+  <html style="" lang="zh-ch">
+  <head>
 
-@keyframes fill {
-from {
-  fill: transparent;
-}
-to {
-  fill: #333399;
-}
-}</style>
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<h3>
- <svg width="321" height="71" viewBox="0 0 321 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path class="path" d="M106.922 44.2812V71H97.9219V2.75H123.094C130.562 2.75 136.406 4.65625 140.625 8.46875C144.875 12.2812 147 17.3281 147 23.6094C147 30.2344 144.922 35.3438 140.766 38.9375C136.641 42.5 130.719 44.2812 123 44.2812H106.922ZM106.922 36.9219H123.094C127.906 36.9219 131.594 35.7969 134.156 33.5469C136.719 31.2656 138 27.9844 138 23.7031C138 19.6406 136.719 16.3906 134.156 13.9531C131.594 11.5156 128.078 10.25 123.609 10.1562H106.922V36.9219Z" fill="none" stroke="#333399" stroke-width="3"/>
-											<path class="path" d="M176.781 71H167.781V2.75H176.781V71Z"  fill="none" stroke="#333399" stroke-width="3"/>
-											<path class="path" d="M225.03 28.9062L241.389 2.75H251.983L230.421 36.5938L252.499 71H241.811L225.03 44.375L208.155 71H197.514L219.639 36.5938L198.03 2.75H208.577L225.03 28.9062Z"  fill="none" stroke="#333399" stroke-width="3"/>
-											<path class="path" d="M292.404 37.0156L310.217 2.75H320.436L296.904 45.5469V71H287.904V45.5469L264.373 2.75H274.686L292.404 37.0156Z"  fill="none" stroke="#333399" stroke-width="3"/>
-											<path class="path" d="M66.2907 38.8848C68.0657 39.5749 70.038 38.7205 70.7612 36.9459C71.4515 35.1714 70.5968 33.1996 68.8218 32.4767L51.7945 25.7728L33.4852 18.543L38.9418 4.70802C39.6321 2.93345 38.7775 0.961712 37.0024 0.238741C35.2274 -0.451368 33.2551 0.403052 32.5319 2.17762L27.0424 16.0455L13.2037 10.5904C11.4286 9.90026 9.42346 10.7875 8.73317 12.5292C8.04287 14.3038 8.89752 16.2755 10.6726 16.9985L24.5114 22.4537L18.5617 37.5703L4.72287 32.1152C2.94783 31.4251 0.975553 32.2795 0.252386 34.0541C-0.470781 35.8286 0.416742 37.8004 2.19179 38.5233L16.0306 43.9785L10.574 57.8135C9.88366 59.5881 10.7383 61.5598 12.5134 62.2828C14.2884 63.0058 16.2607 62.1185 16.9838 60.3439L22.4405 46.5089L37.5612 52.457L32.1046 66.292C31.4143 68.0666 32.269 70.0383 34.044 70.7613C35.8191 71.4514 37.7913 70.597 38.5145 68.8224L43.9711 54.9874L57.8099 60.4425C59.585 61.1326 61.5572 60.2782 62.2804 58.5036C62.9707 56.7291 62.1161 54.7573 60.341 54.0343L46.5022 48.5792L52.4519 33.4625L66.2907 38.8848ZM40.0923 46.0488L24.9716 40.1007L30.9213 24.9841L46.042 30.9321L40.0923 46.0488Z"  fill="none" stroke="#333399" stroke-width="3"/>
-											<path class="path" d="M61.7573 16.111C60.5751 19.7918 57.9117 22.2281 55.8084 21.5525C53.7051 20.877 52.9584 17.3455 54.1405 13.6647C55.3227 9.98388 57.9861 7.54763 60.0895 8.22316C62.1928 8.89869 62.9395 12.4302 61.7573 16.111Z"  fill="none" stroke="#333399" stroke-width="3"/>
-											</svg>
-</h3>
-<!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
-  <script>
-  const svgPath = document.querySelectorAll('.path');
-
-    const svgText = anime({
-      targets: svgPath,
-      loop: false,
-      direction: 'alternate',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
-      duration: 800,
-      delay: (el, i) => {return i * 600;} });</script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link rel="shortcut icon" href="https://smaco2.uestc.edu.cn/wx/favicon.ico">
 
 
-</body>
-</html>
+    <title>
+     平安成电智慧通行</title>
+     <style>
+     [v-cloak]{display:none}</style>
+
+     <link href="files/chunk-b2496998.css" rel="prefetch">
+     <link href="files/app.css" rel="preload" as="style">
+     <link href="files/chunk-vendors.css" rel="preload" as="style">
+
+     <link href="files/chunk-vendors.css" rel="stylesheet">
+     <link href="files/app.css" rel="stylesheet">
+     <link rel="icon" type="image/png" sizes="32x32" href="https://smaco2.uestc.edu.cn/img/icons/ico.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="https://smaco2.uestc.edu.cn/img/icons/ico.png">
+     <meta name="theme-color" content="#00C4A4">
+     <meta name="apple-mobile-web-app-capable" content="no">
+     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+     <meta name="apple-mobile-web-app-title" content="平安成电智慧通行">
+     <link rel="apple-touch-icon" href="https://smaco2.uestc.edu.cn/img/icons/ico.png">
+     <link rel="mask-icon" href="https://smaco2.uestc.edu.cn/img/icons/ico.png" color="#00C4A4">
+     <meta name="msapplication-TileImage" content="/img/icons/ico.png">
+     <meta name="msapplication-TileColor" content="#000000">
+     <link rel="stylesheet" type="text/css" href="files/chunk-b2496998.css">
+     <style type="text/css" id="vuetify-theme-stylesheet">
+
+     a { color: #00c4a4; }
+     .primary {
+      background-color: #00c4a4 !important;
+      border-color: #00c4a4 !important;
+    }
+    .primary--text {
+      color: #00c4a4 !important;
+      caret-color: #00c4a4 !important;
+    }
+    .primary.lighten-5 {
+      background-color: #c3ffff !important;
+      border-color: #c3ffff !important;
+    }
+    .primary--text.text--lighten-5 {
+      color: #c3ffff !important;
+      caret-color: #c3ffff !important;
+    }
+    .primary.lighten-4 {
+      background-color: #a4ffff !important;
+      border-color: #a4ffff !important;
+    }
+    .primary--text.text--lighten-4 {
+      color: #a4ffff !important;
+      caret-color: #a4ffff !important;
+    }
+    .primary.lighten-3 {
+      background-color: #85fff7 !important;
+      border-color: #85fff7 !important;
+    }
+    .primary--text.text--lighten-3 {
+      color: #85fff7 !important;
+      caret-color: #85fff7 !important;
+    }
+    .primary.lighten-2 {
+      background-color: #65fedb !important;
+      border-color: #65fedb !important;
+    }
+    .primary--text.text--lighten-2 {
+      color: #65fedb !important;
+      caret-color: #65fedb !important;
+    }
+    .primary.lighten-1 {
+      background-color: #41e0bf !important;
+      border-color: #41e0bf !important;
+    }
+    .primary--text.text--lighten-1 {
+      color: #41e0bf !important;
+      caret-color: #41e0bf !important;
+    }
+    .primary.darken-1 {
+      background-color: #00a88a !important;
+      border-color: #00a88a !important;
+    }
+    .primary--text.text--darken-1 {
+      color: #00a88a !important;
+      caret-color: #00a88a !important;
+    }
+    .primary.darken-2 {
+      background-color: #008d70 !important;
+      border-color: #008d70 !important;
+    }
+    .primary--text.text--darken-2 {
+      color: #008d70 !important;
+      caret-color: #008d70 !important;
+    }
+    .primary.darken-3 {
+      background-color: #007358 !important;
+      border-color: #007358 !important;
+    }
+    .primary--text.text--darken-3 {
+      color: #007358 !important;
+      caret-color: #007358 !important;
+    }
+    .primary.darken-4 {
+      background-color: #005941 !important;
+      border-color: #005941 !important;
+    }
+    .primary--text.text--darken-4 {
+      color: #005941 !important;
+      caret-color: #005941 !important;
+    }
+    .secondary {
+      background-color: #424242 !important;
+      border-color: #424242 !important;
+    }
+    .secondary--text {
+      color: #424242 !important;
+      caret-color: #424242 !important;
+    }
+    .secondary.lighten-5 {
+      background-color: #c1c1c1 !important;
+      border-color: #c1c1c1 !important;
+    }
+    .secondary--text.text--lighten-5 {
+      color: #c1c1c1 !important;
+      caret-color: #c1c1c1 !important;
+    }
+    .secondary.lighten-4 {
+      background-color: #a6a6a6 !important;
+      border-color: #a6a6a6 !important;
+    }
+    .secondary--text.text--lighten-4 {
+      color: #a6a6a6 !important;
+      caret-color: #a6a6a6 !important;
+    }
+    .secondary.lighten-3 {
+      background-color: #8b8b8b !important;
+      border-color: #8b8b8b !important;
+    }
+    .secondary--text.text--lighten-3 {
+      color: #8b8b8b !important;
+      caret-color: #8b8b8b !important;
+    }
+    .secondary.lighten-2 {
+      background-color: #727272 !important;
+      border-color: #727272 !important;
+    }
+    .secondary--text.text--lighten-2 {
+      color: #727272 !important;
+      caret-color: #727272 !important;
+    }
+    .secondary.lighten-1 {
+      background-color: #595959 !important;
+      border-color: #595959 !important;
+    }
+    .secondary--text.text--lighten-1 {
+      color: #595959 !important;
+      caret-color: #595959 !important;
+    }
+    .secondary.darken-1 {
+      background-color: #2c2c2c !important;
+      border-color: #2c2c2c !important;
+    }
+    .secondary--text.text--darken-1 {
+      color: #2c2c2c !important;
+      caret-color: #2c2c2c !important;
+    }
+    .secondary.darken-2 {
+      background-color: #171717 !important;
+      border-color: #171717 !important;
+    }
+    .secondary--text.text--darken-2 {
+      color: #171717 !important;
+      caret-color: #171717 !important;
+    }
+    .secondary.darken-3 {
+      background-color: #000000 !important;
+      border-color: #000000 !important;
+    }
+    .secondary--text.text--darken-3 {
+      color: #000000 !important;
+      caret-color: #000000 !important;
+    }
+    .secondary.darken-4 {
+      background-color: #000000 !important;
+      border-color: #000000 !important;
+    }
+    .secondary--text.text--darken-4 {
+      color: #000000 !important;
+      caret-color: #000000 !important;
+    }
+    .accent {
+      background-color: #00d6b3 !important;
+      border-color: #00d6b3 !important;
+    }
+    .accent--text {
+      color: #00d6b3 !important;
+      caret-color: #00d6b3 !important;
+    }
+    .accent.lighten-5 {
+      background-color: #caffff !important;
+      border-color: #caffff !important;
+    }
+    .accent--text.text--lighten-5 {
+      color: #caffff !important;
+      caret-color: #caffff !important;
+    }
+    .accent.lighten-4 {
+      background-color: #abffff !important;
+      border-color: #abffff !important;
+    }
+    .accent--text.text--lighten-4 {
+      color: #abffff !important;
+      caret-color: #abffff !important;
+    }
+    .accent.lighten-3 {
+      background-color: #8bffff !important;
+      border-color: #8bffff !important;
+    }
+    .accent--text.text--lighten-3 {
+      color: #8bffff !important;
+      caret-color: #8bffff !important;
+    }
+    .accent.lighten-2 {
+      background-color: #6affeb !important;
+      border-color: #6affeb !important;
+    }
+    .accent--text.text--lighten-2 {
+      color: #6affeb !important;
+      caret-color: #6affeb !important;
+    }
+    .accent.lighten-1 {
+      background-color: #45f3ce !important;
+      border-color: #45f3ce !important;
+    }
+    .accent--text.text--lighten-1 {
+      color: #45f3ce !important;
+      caret-color: #45f3ce !important;
+    }
+    .accent.darken-1 {
+      background-color: #00ba98 !important;
+      border-color: #00ba98 !important;
+    }
+    .accent--text.text--darken-1 {
+      color: #00ba98 !important;
+      caret-color: #00ba98 !important;
+    }
+    .accent.darken-2 {
+      background-color: #009e7e !important;
+      border-color: #009e7e !important;
+    }
+    .accent--text.text--darken-2 {
+      color: #009e7e !important;
+      caret-color: #009e7e !important;
+    }
+    .accent.darken-3 {
+      background-color: #008365 !important;
+      border-color: #008365 !important;
+    }
+    .accent--text.text--darken-3 {
+      color: #008365 !important;
+      caret-color: #008365 !important;
+    }
+    .accent.darken-4 {
+      background-color: #00694d !important;
+      border-color: #00694d !important;
+    }
+    .accent--text.text--darken-4 {
+      color: #00694d !important;
+      caret-color: #00694d !important;
+    }
+    .error {
+      background-color: #ff5252 !important;
+      border-color: #ff5252 !important;
+    }
+    .error--text {
+      color: #ff5252 !important;
+      caret-color: #ff5252 !important;
+    }
+    .error.lighten-5 {
+      background-color: #ffe4d5 !important;
+      border-color: #ffe4d5 !important;
+    }
+    .error--text.text--lighten-5 {
+      color: #ffe4d5 !important;
+      caret-color: #ffe4d5 !important;
+    }
+    .error.lighten-4 {
+      background-color: #ffc6b9 !important;
+      border-color: #ffc6b9 !important;
+    }
+    .error--text.text--lighten-4 {
+      color: #ffc6b9 !important;
+      caret-color: #ffc6b9 !important;
+    }
+    .error.lighten-3 {
+      background-color: #ffa99e !important;
+      border-color: #ffa99e !important;
+    }
+    .error--text.text--lighten-3 {
+      color: #ffa99e !important;
+      caret-color: #ffa99e !important;
+    }
+    .error.lighten-2 {
+      background-color: #ff8c84 !important;
+      border-color: #ff8c84 !important;
+    }
+    .error--text.text--lighten-2 {
+      color: #ff8c84 !important;
+      caret-color: #ff8c84 !important;
+    }
+    .error.lighten-1 {
+      background-color: #ff6f6a !important;
+      border-color: #ff6f6a !important;
+    }
+    .error--text.text--lighten-1 {
+      color: #ff6f6a !important;
+      caret-color: #ff6f6a !important;
+    }
+    .error.darken-1 {
+      background-color: #df323b !important;
+      border-color: #df323b !important;
+    }
+    .error--text.text--darken-1 {
+      color: #df323b !important;
+      caret-color: #df323b !important;
+    }
+    .error.darken-2 {
+      background-color: #bf0025 !important;
+      border-color: #bf0025 !important;
+    }
+    .error--text.text--darken-2 {
+      color: #bf0025 !important;
+      caret-color: #bf0025 !important;
+    }
+    .error.darken-3 {
+      background-color: #9f0010 !important;
+      border-color: #9f0010 !important;
+    }
+    .error--text.text--darken-3 {
+      color: #9f0010 !important;
+      caret-color: #9f0010 !important;
+    }
+    .error.darken-4 {
+      background-color: #800000 !important;
+      border-color: #800000 !important;
+    }
+    .error--text.text--darken-4 {
+      color: #800000 !important;
+      caret-color: #800000 !important;
+    }
+    .info {
+      background-color: #2196f3 !important;
+      border-color: #2196f3 !important;
+    }
+    .info--text {
+      color: #2196f3 !important;
+      caret-color: #2196f3 !important;
+    }
+    .info.lighten-5 {
+      background-color: #d4ffff !important;
+      border-color: #d4ffff !important;
+    }
+    .info--text.text--lighten-5 {
+      color: #d4ffff !important;
+      caret-color: #d4ffff !important;
+    }
+    .info.lighten-4 {
+      background-color: #b5ffff !important;
+      border-color: #b5ffff !important;
+    }
+    .info--text.text--lighten-4 {
+      color: #b5ffff !important;
+      caret-color: #b5ffff !important;
+    }
+    .info.lighten-3 {
+      background-color: #95e8ff !important;
+      border-color: #95e8ff !important;
+    }
+    .info--text.text--lighten-3 {
+      color: #95e8ff !important;
+      caret-color: #95e8ff !important;
+    }
+    .info.lighten-2 {
+      background-color: #75ccff !important;
+      border-color: #75ccff !important;
+    }
+    .info--text.text--lighten-2 {
+      color: #75ccff !important;
+      caret-color: #75ccff !important;
+    }
+    .info.lighten-1 {
+      background-color: #51b0ff !important;
+      border-color: #51b0ff !important;
+    }
+    .info--text.text--lighten-1 {
+      color: #51b0ff !important;
+      caret-color: #51b0ff !important;
+    }
+    .info.darken-1 {
+      background-color: #007cd6 !important;
+      border-color: #007cd6 !important;
+    }
+    .info--text.text--darken-1 {
+      color: #007cd6 !important;
+      caret-color: #007cd6 !important;
+    }
+    .info.darken-2 {
+      background-color: #0064ba !important;
+      border-color: #0064ba !important;
+    }
+    .info--text.text--darken-2 {
+      color: #0064ba !important;
+      caret-color: #0064ba !important;
+    }
+    .info.darken-3 {
+      background-color: #004d9f !important;
+      border-color: #004d9f !important;
+    }
+    .info--text.text--darken-3 {
+      color: #004d9f !important;
+      caret-color: #004d9f !important;
+    }
+    .info.darken-4 {
+      background-color: #003784 !important;
+      border-color: #003784 !important;
+    }
+    .info--text.text--darken-4 {
+      color: #003784 !important;
+      caret-color: #003784 !important;
+    }
+    .success {
+      background-color: #4caf50 !important;
+      border-color: #4caf50 !important;
+    }
+    .success--text {
+      color: #4caf50 !important;
+      caret-color: #4caf50 !important;
+    }
+    .success.lighten-5 {
+      background-color: #dcffd6 !important;
+      border-color: #dcffd6 !important;
+    }
+    .success--text.text--lighten-5 {
+      color: #dcffd6 !important;
+      caret-color: #dcffd6 !important;
+    }
+    .success.lighten-4 {
+      background-color: #beffba !important;
+      border-color: #beffba !important;
+    }
+    .success--text.text--lighten-4 {
+      color: #beffba !important;
+      caret-color: #beffba !important;
+    }
+    .success.lighten-3 {
+      background-color: #a2ff9e !important;
+      border-color: #a2ff9e !important;
+    }
+    .success--text.text--lighten-3 {
+      color: #a2ff9e !important;
+      caret-color: #a2ff9e !important;
+    }
+    .success.lighten-2 {
+      background-color: #85e783 !important;
+      border-color: #85e783 !important;
+    }
+    .success--text.text--lighten-2 {
+      color: #85e783 !important;
+      caret-color: #85e783 !important;
+    }
+    .success.lighten-1 {
+      background-color: #69cb69 !important;
+      border-color: #69cb69 !important;
+    }
+    .success--text.text--lighten-1 {
+      color: #69cb69 !important;
+      caret-color: #69cb69 !important;
+    }
+    .success.darken-1 {
+      background-color: #2d9437 !important;
+      border-color: #2d9437 !important;
+    }
+    .success--text.text--darken-1 {
+      color: #2d9437 !important;
+      caret-color: #2d9437 !important;
+    }
+    .success.darken-2 {
+      background-color: #00791e !important;
+      border-color: #00791e !important;
+    }
+    .success--text.text--darken-2 {
+      color: #00791e !important;
+      caret-color: #00791e !important;
+    }
+    .success.darken-3 {
+      background-color: #006000 !important;
+      border-color: #006000 !important;
+    }
+    .success--text.text--darken-3 {
+      color: #006000 !important;
+      caret-color: #006000 !important;
+    }
+    .success.darken-4 {
+      background-color: #004700 !important;
+      border-color: #004700 !important;
+    }
+    .success--text.text--darken-4 {
+      color: #004700 !important;
+      caret-color: #004700 !important;
+    }
+    .warning {
+      background-color: #fb8c00 !important;
+      border-color: #fb8c00 !important;
+    }
+    .warning--text {
+      color: #fb8c00 !important;
+      caret-color: #fb8c00 !important;
+    }
+    .warning.lighten-5 {
+      background-color: #ffff9e !important;
+      border-color: #ffff9e !important;
+    }
+    .warning--text.text--lighten-5 {
+      color: #ffff9e !important;
+      caret-color: #ffff9e !important;
+    }
+    .warning.lighten-4 {
+      background-color: #fffb82 !important;
+      border-color: #fffb82 !important;
+    }
+    .warning--text.text--lighten-4 {
+      color: #fffb82 !important;
+      caret-color: #fffb82 !important;
+    }
+    .warning.lighten-3 {
+      background-color: #ffdf67 !important;
+      border-color: #ffdf67 !important;
+    }
+    .warning--text.text--lighten-3 {
+      color: #ffdf67 !important;
+      caret-color: #ffdf67 !important;
+    }
+    .warning.lighten-2 {
+      background-color: #ffc24b !important;
+      border-color: #ffc24b !important;
+    }
+    .warning--text.text--lighten-2 {
+      color: #ffc24b !important;
+      caret-color: #ffc24b !important;
+    }
+    .warning.lighten-1 {
+      background-color: #ffa72d !important;
+      border-color: #ffa72d !important;
+    }
+    .warning--text.text--lighten-1 {
+      color: #ffa72d !important;
+      caret-color: #ffa72d !important;
+    }
+    .warning.darken-1 {
+      background-color: #db7200 !important;
+      border-color: #db7200 !important;
+    }
+    .warning--text.text--darken-1 {
+      color: #db7200 !important;
+      caret-color: #db7200 !important;
+    }
+    .warning.darken-2 {
+      background-color: #bb5900 !important;
+      border-color: #bb5900 !important;
+    }
+    .warning--text.text--darken-2 {
+      color: #bb5900 !important;
+      caret-color: #bb5900 !important;
+    }
+    .warning.darken-3 {
+      background-color: #9d4000 !important;
+      border-color: #9d4000 !important;
+    }
+    .warning--text.text--darken-3 {
+      color: #9d4000 !important;
+      caret-color: #9d4000 !important;
+    }
+    .warning.darken-4 {
+      background-color: #802700 !important;
+      border-color: #802700 !important;
+    }
+    .warning--text.text--darken-4 {
+      color: #802700 !important;
+      caret-color: #802700 !important;
+      }</style>
+    </head>
+    <body style="">
+     <noscript>
+       <strong>
+         请在您的浏览器启用JavaScript以正常使用系统</strong>
+         <strong>
+           We're sorry but This system doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+         </noscript>
+         <div data-app="true" class="application theme--light" id="app">
+           <div tabindex="-1" data-v-477b291f="" class="v-dialog__content" style="z-index: 0;">
+             <div class="v-dialog" style="width: 600px; display: none;">
+               <div data-v-477b291f="" class="layout column">
+                 <div data-v-477b291f="" class="pa-3 v-card v-sheet theme--light">
+                   <div data-v-477b291f="" class="layout column">
+                     <div data-v-477b291f="" class="v-input v-textarea v-textarea--auto-grow v-textarea--no-resize v-text-field v-input--is-label-active v-input--is-dirty v-input--is-readonly theme--light" style="line-height: 10em;">
+                       <div class="v-input__control">
+                         <div class="v-input__slot">
+                           <div class="v-text-field__slot">
+                             <textarea readonly="readonly" rows="5" style="height: 120px;">
+                               【电子科技大学】全体师生员工：
+                               根据学校应对新型冠状病毒感染肺炎疫情防控工作领导小组工作部署，为了广大师生健康安全，自2020年1月28日下午6时起，实施校门临时管控措施。
+                               1、暂停校园交通管理系统的车行和人行预约功能；
+                               2、所有未经注册认证车辆一律不准许进入校园；
+                               3、校园不接待参观者和无关人员，本校师生员工除因保障、值守或应急等工作事由之外原则上不得进校，不得携带家属及校外亲友进校；
+                               4、清水河校区仅开放西门人行和车行通道，沙河校区仅开放东门人行和车行通道，其他门的人行和车行通道全部关闭；
+                               5、所有入校车辆和人员必须凭有效身份证件 本校师生证明证件（如工作证、工牌或一卡通等）进校；
+                               6、请广大教职工理解并配合校门岗位人员做好体温检测、盘问和信息登记工作。
+                               特殊时期，特殊管理，由此带来的不便，敬请大家理解、支持和配合。</textarea>
+                             </div>
+                           </div>
+                           <div class="v-text-field__details">
+                             <div class="v-messages theme--light">
+                               <div class="v-messages__wrapper">
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div data-v-477b291f="" class="layout justify-center">
+                         <button data-v-477b291f="" disabled="disabled" type="button" class="primary v-btn v-btn--disabled theme--light">
+                           <div class="v-btn__content">
+                             进校登记</div>
+                           </button>
+                           <button data-v-477b291f="" type="button" class="error v-btn theme--light">
+                             <div class="v-btn__content">
+                               取消</div>
+                             </button>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div tabindex="-1" data-v-790bada4="" class="v-dialog__content" style="z-index: 0;">
+                   <div class="v-dialog v-dialog--persistent" style="max-width: 400px; display: none;">
+                     <div data-v-790bada4="" class="v-card v-sheet theme--light" style="max-width: 400px;">
+                       <div data-v-790bada4="" class="v-card__title title" style="height: 56px;">
+                         登录信息失效</div>
+                         <div data-v-790bada4="" class="v-card__text py-2 body-1">
+                           <!---->
+                           <div data-v-790bada4="" class="flex justify-center layout row">
+                             <div data-v-d9565426="" class="layout mx-2 column">
+                               <div data-v-d9565426="" class="flex align-center column justify-center layout">
+                                 <i data-v-d9565426="" aria-hidden="true" class="v-icon pb-3 mdi mdi-timer-sand-empty theme--light" style="font-size: 36px;">
+                                 </i>
+                                 <span data-v-d9565426="" class="subheading">
+                                   由于长时间未操作, 您的登录信息已失效</span>
+                                 </div>
+                                 <div data-v-d9565426="" class="flex">
+                                   <div data-v-d9565426="" class="text-xs-center pt-2 pb-1">
+                                     系统将于<span data-v-d9565426="" class="px-1 primary--text">
+                                     0</span>
+                                     秒后自动退出
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <!---->
+                           <div data-v-790bada4="" class="v-card__text py-0" style="max-height: 150px; overflow-y: auto;">
+                             <!---->
+                           </div>
+                           <!---->
+                           <div data-v-790bada4="" class="v-card__actions">
+                             <div data-v-790bada4="" class="spacer">
+                             </div>
+                             <!---->
+                             <button data-v-790bada4="" type="button" class="v-btn v-btn--flat theme--light primary--text">
+                               <div class="v-btn__content">
+
+                                立即退出
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div tabindex="-1" data-v-790bada4="" class="v-dialog__content" style="z-index: 0;">
+                     <div class="v-dialog v-dialog--persistent" style="max-width: 350px; display: none;">
+                       <div data-v-790bada4="" class="v-card v-sheet theme--light" style="max-width: 350px;">
+                         <div data-v-790bada4="" class="v-card__title title" style="height: 56px;">
+                         </div>
+                         <div data-v-790bada4="" class="v-card__text py-2 body-1">
+                           <!---->
+                           <div data-v-790bada4="" class="flex justify-center layout row">
+                           </div>
+                         </div>
+                         <!---->
+                         <div data-v-790bada4="" class="v-card__text py-0" style="max-height: 150px; overflow-y: auto;">
+                           <!---->
+                         </div>
+                         <!---->
+                         <div data-v-790bada4="" class="v-card__actions">
+                           <div data-v-790bada4="" class="spacer">
+                           </div>
+                           <button data-v-790bada4="" type="button" class="v-btn v-btn--flat theme--light grey--text">
+                             <div class="v-btn__content">
+
+                              取消
+                            </div>
+                          </button>
+                          <button data-v-790bada4="" type="button" class="v-btn v-btn--flat theme--light primary--text">
+                           <div class="v-btn__content">
+
+                            确认
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="application--wrap">
+                 <div data-v-19cace2a="" right="" top="">
+                   <div data-v-6dc4700a="" data-v-19cace2a="">
+                     <span data-v-6dc4700a="">
+                     </span>
+                     <!---->
+                     <!---->
+                     <!---->
+                   </div>
+                   <div data-v-790bada4="" data-v-19cace2a="" class="v-dialog__container" style="display: block;">
+                   </div>
+                 </div>
+                 <div data-v-790bada4="" data-v-d9565426="" class="v-dialog__container" style="display: block;">
+                 </div>
+                 <div data-v-477b291f="" data-v-e3189a58="" class="pt-5 v-card v-card--flat v-sheet v-sheet--tile theme--light">
+                   <div data-v-477b291f="" class="v-card__title mb-3">
+                     <div data-v-477b291f="" class="layout justify-center">
+                       <div data-v-477b291f="" class="layout column justify-center">
+                         <div data-v-477b291f="" class="flex xs12">
+                           <div data-v-477b291f="" style="text-align: justify;">
+                             <span data-v-477b291f="" id="text_type" style="font-weight: bold; color: green; font-size: 24px; width: 100%; display: inline-block;">
+                               研究生用户，入校授权有效！ </span>
+                             </div>
+                           </div>
+                          <!--  <div data-v-477b291f="" class="flex xs12">
+                             <div data-v-477b291f="" style="text-align: justify;">
+                               <span data-v-477b291f="" style="font-weight: bold; color: red; font-size: 24px; width: 100%; display: inline-block;">
+                                “返校授权查询：请您补充完整您的返校交通信息”</span>
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div data-v-477b291f="" role="list" class="v-list theme--light">
+                       <hr data-v-477b291f="" class="v-divider theme--light">
+                       <!---->
+                       <!---->
+                       <!---->
+                       <div data-v-477b291f="" role="listitem">
+                         <div class="v-list__tile theme--light">
+                           <div data-v-477b291f="" class="v-list__tile__action">
+                             <div data-v-477b291f="" class="layout">
+                               <i data-v-477b291f="" aria-hidden="true" class="v-icon mdi mdi-account theme--light">
+                               </i>
+                               <span data-v-477b291f="" class="ml-2 mr-2">
+                                 用户姓名</span>
+                               </div>
+                             </div>
+                             <div data-v-477b291f="" class="v-list__tile__content">
+                               <div data-v-477b291f="" class="v-list__tile__title">
+                                 <div data-v-477b291f="" class="layout justify-end">
+                                   <h2 data-v-477b291f="" id = "user_name">
+                                      </h2>
+                                   </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <!---->
+                           <!---->
+                           <div data-v-477b291f="" role="listitem">
+                             <div class="v-list__tile theme--light">
+                               <div data-v-477b291f="" class="v-list__tile__action">
+                                 <div data-v-477b291f="" class="layout">
+                                   <i data-v-477b291f="" aria-hidden="true" class="v-icon mdi mdi-account-multiple theme--light">
+                                   </i>
+                                   <span data-v-477b291f="" class="ml-2 mr-2">
+                                     登记类型</span>
+                                   </div>
+                                 </div>
+                                 <div data-v-477b291f="" class="v-list__tile__content">
+                                   <div data-v-477b291f="" class="v-list__tile__title warning--text">
+                                     <div data-v-477b291f="" class="layout justify-end">
+                                       <h2 data-v-477b291f="">
+                                         研究生（硕士）</h2>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               <!---->
+                               <!---->
+                               <div data-v-477b291f="" role="listitem">
+                                 <div class="v-list__tile theme--light">
+                                   <div data-v-477b291f="" class="v-list__tile__action">
+                                     <div data-v-477b291f="" class="layout">
+                                       <i data-v-477b291f="" aria-hidden="true" class="v-icon mdi mdi-timer theme--light">
+                                       </i>
+                                       <span data-v-477b291f="" class="ml-2 mr-2">
+                                         登记时间</span>
+                                       </div>
+                                     </div>
+                                     <div data-v-477b291f="" class="v-list__tile__content">
+                                       <div data-v-477b291f="" class="v-list__tile__title primary--text">
+                                         <div data-v-477b291f="" class="layout justify-end">
+                                           <h3 data-v-477b291f="" style="width: 180px;">
+                                             <div data-v-43a209c8="" data-v-477b291f="" class="wrap">
+                                               <div data-v-43a209c8="" id="box" style="transform: translateX(0px);">
+                                                 <div data-v-43a209c8="" id="marquee">
+                                                   2020-05-22 13:09:17</div>
+                                                   <div data-v-43a209c8="" id="copy">
+                                                     2020-05-22 13:09:17</div>
+                                                   </div>
+                                                   <div data-v-43a209c8="" id="node">
+                                                     2020-05-22 13:09:17</div>
+                                                   </div>
+                                                 </h3>
+                                               </div>
+                                             </div>
+                                           </div>
+                                         </div>
+                                       </div>
+                                       <!---->
+                                     </div>
+                                     <!---->
+                                     <div data-v-477b291f="" class="v-dialog__container" style="display: block;">
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+<script charset="utf-8" src="files/my.js">
+     </script>
+                             </body>
+                             </html>
