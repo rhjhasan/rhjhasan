@@ -28,7 +28,7 @@ function GetRequest() {
     return theRequest;
 } 
 var Request =GetRequest();
-var text_type = Request["type"];
+var text_type = parseInt(Request["type"]);
 now = getTime();
 document.getElementById('marquee').innerHTML = now;
 document.getElementById('copy').innerHTML = now;
