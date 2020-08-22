@@ -28,13 +28,13 @@ function GetRequest() {
     return theRequest;
 } 
 var Request =GetRequest();
-var text_type = parseInt(Request["type"]);
+var text_type = 0;
 now = getTime();
 document.getElementById('marquee').innerHTML = now;
 document.getElementById('copy').innerHTML = now;
 document.getElementById('node').innerHTML = now;
 document.getElementById('user_name').innerHTML = Request["name"];
-if(text_type == 1)
+if(text_type == 0)
 	document.getElementById('text_type').innerHTML = "留学生用户，出校授权有效！";
 else
 	document.getElementById('text_type').innerHTML = "留学生用户，入校授权有效！";
