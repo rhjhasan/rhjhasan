@@ -1,602 +1,317 @@
 <!DOCTYPE html>
+<html style="" lang="zh-ch">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<html lang="zh-ch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <link
+    />
 
-    
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="Cache" content="no-cache">
-    
+    <title>平安成电智慧通行</title>
+  
 
+    <link href="chunk-b2496998.css" rel="prefetch" />
+    <link href="app.css" rel="preload" as="style" />
+    <link href="chunk-vendors.css" rel="preload" as="style" />
 
-    <title>
-     平安成电智慧通行</title>
+    <link href="chunk-vendors.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link
+    />
+    <link
      
-     <meta name="theme-color" content="#00C4A4">
-     <meta name="apple-mobile-web-app-capable" content="no">
-     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-     <meta name="apple-mobile-web-app-title" content="平安成电智慧通行">
-     <meta name="msapplication-TileImage" content="/img/icons/ico.png">
-     <meta name="msapplication-TileColor" content="#000000">
-    
-     <style>html {
-        font-size: 14px;
-        overflow-x: hidden;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
-    }
-    
-    .application {
-        font-family: Roboto,Noto Sans S Chinese,PingFangSC,Microsoft YaHei,sans-serif;
-        line-height: 1.5
-    }::selection {
-        background-color: #b3d4fc;
-        color: #000;
-        text-shadow: none
-    }  svg:not(:root) {
-        overflow: hidden
-    }
-    [type=reset],[type=submit],button,html [type=button] {
-        -webkit-appearance: button
-    }
-    
-    button,select {
-        text-transform: none
-    }
-    
-    button,input,select,textarea {
-        background-color: transparent;
-        border-style: none;
-        color: inherit
-    }
-    button,input,optgroup,select,textarea {
-        font: inherit
-    }
-    
-    [role=button],[type=button],[type=reset],[type=submit],button {
-        cursor: pointer
-    }
-    hr {
-        overflow: visible
-    }html {
-        box-sizing: border-box;
-        overflow-y: scroll;
-        -webkit-text-size-adjust: 100%
-    }
-    
-    *,:after,:before {
-        box-sizing: inherit
-    }
-    
-    :after,:before {
-        text-decoration: inherit;
-        vertical-align: inherit
-    }
-    
-    * {
-        background-repeat: no-repeat;
-        padding: 0;
-        margin: 0
-    }
-    
-    button {
-        overflow: visible
-    }
-    
-    .v-list__tile__action--stack,.v-list__tile__content {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal
-    }
-    
-    .v-list__tile__content {
-        text-align: left;
-        -webkit-box-flex: 1;
-        flex: 1 1 auto;
-        overflow: hidden;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: center;
-        justify-content: center;
-        flex-direction: column
-    }  .v-list__tile__action,.v-list__tile__avatar {
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-pack: start;
-        justify-content: flex-start;
-        min-width: 56px
-    }
-    
-    .v-list__tile__action {
-        -webkit-box-align: center;
-        align-items: center
-    }
-    .v-list__tile__action,.v-list__tile__content {
-        height: 100%
-    }
-    
-    .v-list__tile__sub-title,.v-list__tile__title {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
-        transition: .3s cubic-bezier(.25,.8,.5,1);
-        width: 100%
-    }
-    
-    .v-list__tile__title {
-        height: 24px;
-        line-height: 24px;
-        position: relative;
-        text-align: left
-    }    .v-list {
-        list-style-type: none;
-        padding: 8px 0 8px;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
-        transition: .3s cubic-bezier(.25,.8,.5,1)
-    }
-    
-    .v-list>div {
-        -webkit-transition: inherit;
-        transition: inherit
-    }
-    
-    .v-list__tile {
-        -webkit-box-align: center;
-        align-items: center;
-        color: inherit;
-        display: -webkit-box;
-        display: flex;
-        font-size: 16px;
-        font-weight: 400;
-        height: 48px;
-        margin: 0;
-        padding: 0 16px;
-        position: relative;
-        text-decoration: none;
-        -webkit-transition: background .3s cubic-bezier(.25,.8,.5,1);
-        transition: background .3s cubic-bezier(.25,.8,.5,1)
-    } .theme--light.v-list {
-        background: #fff;
-        color: rgba(0,0,0,.87)
-    }  .layout.column {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column
-    }
-    
-    .layout.column.reverse {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        flex-direction: column-reverse
-    }
-    
-    .layout.column>.flex {
-        max-width: 100%
-    }.layout {
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-flex: 1;
-        flex: 1 1 auto;
-        flex-wrap: nowrap;
-        min-width: 0
-    }
-    .theme--light.v-divider {
-        border-color: rgba(0,0,0,.12)
-    }
-    
-    .theme--dark.v-divider {
-        border-color: hsla(0,0%,100%,.12)
-    }
-    
-    .v-divider {
-        display: block;
-        -webkit-box-flex: 1;
-        flex: 1 1 0px;
-        max-width: 100%;
-        height: 0;
-        max-height: 0;
-        border: solid;
-        border-width: thin 0 0 0;
-        -webkit-transition: inherit;
-        transition: inherit
-    }
-    .v-dialog__container {
-        display: inline-block;
-        vertical-align: middle
-    }
-    
-    .primary {
+    />
+    <meta name="theme-color" content="#00C4A4" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="平安成电智慧通行" />
+    <link
+     
+    />
+    <link
+      
+    />
+    <meta name="msapplication-TileImage" content="/img/icons/ico.png" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <link rel="stylesheet" type="text/css" href="chunk-b2496998.css" />
+    <style type="text/css" id="vuetify-theme-stylesheet">
+      .wrap[data-v-43a209c8] {
+  overflow: hidden;
+}
+#box[data-v-43a209c8] {
+  width: 80000%;
+}
+#box div[data-v-43a209c8] {
+  float: left;
+}
+#marquee[data-v-43a209c8] {
+  margin: 0 10px 0 0;
+}
+#node[data-v-43a209c8] {
+  position: absolute;
+  z-index: -999;
+  top: -999999px;
+}
+a {
+        color: #00c4a4;
+      }
+      .primary {
         background-color: #00c4a4 !important;
         border-color: #00c4a4 !important;
-    }
-    
-    .primary--text {
+      }
+      .primary--text {
         color: #00c4a4 !important;
         caret-color: #00c4a4 !important;
-    }
+      }
     
-    .theme--light.v-btn {
-        color: rgba(0,0,0,.87)
-    }
-    
-    .theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat) {
-        background-color: #f5f5f5
-    }
-    
-    .v-btn {
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: 2px;
-        display: -webkit-inline-box;
-        display: inline-flex;
-        height: 36px;
-        -webkit-box-flex: 0;
-        flex: 0 0 auto;
-        font-size: 14px;
-        font-weight: 500;
-        -webkit-box-pack: center;
-        justify-content: center;
-        margin: 6px 8px;
-        min-width: 88px;
-        outline: 0;
-        text-transform: uppercase;
-        text-decoration: none;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
-        transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
-        position: relative;
-        vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none
-    }
-    
-    .v-btn:before {
-        border-radius: inherit;
-        color: inherit;
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        opacity: .12;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
-        transition: .3s cubic-bezier(.25,.8,.5,1);
-        width: 100%
-    }
-    
-    .v-btn {
-        padding: 0 16px
-    }
-    
-    .v-btn__content {
-        -webkit-box-align: center;
-        align-items: center;
-        border-radius: inherit;
-        color: inherit;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-flex: 1;
-        flex: 1 0 auto;
-        -webkit-box-pack: center;
-        justify-content: center;
-        margin: 0 auto;
-        position: relative;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
-        transition: .3s cubic-bezier(.25,.8,.5,1);
-        white-space: nowrap;
-        width: inherit
-    }
-    
-    .v-btn:not(.v-btn--depressed):not(.v-btn--flat) {
-        will-change: box-shadow;
-        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)
-    }
-    
-    .v-btn:not(.v-btn--outline).accent,.v-btn:not(.v-btn--outline).error,.v-btn:not(.v-btn--outline).info,.v-btn:not(.v-btn--outline).primary,.v-btn:not(.v-btn--outline).secondary,.v-btn:not(.v-btn--outline).success,.v-btn:not(.v-btn--outline).warning {
-        color: #fff
-    }
-    
-    .v-dialog__container {
-        display: inline-block;
-        vertical-align: middle
-    }
-    
-    .theme--light.v-card {
-        background-color: #fff;
-        border-color: #fff;
-        color: rgba(0,0,0,.87)
-    }
-    
-    .theme--dark.v-card {
-        background-color: #424242;
-        border-color: #424242;
-        color: #fff
-    }
-    
-    .v-card {
-        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
-        text-decoration: none
-    }
-    
-    .v-card>:first-child:not(.v-btn):not(.v-chip) {
-        border-top-left-radius: inherit;
-        border-top-right-radius: inherit
-    }
-    
-    .v-card>:last-child:not(.v-btn):not(.v-chip) {
-        border-bottom-left-radius: inherit;
-        border-bottom-right-radius: inherit
-    }
-    
-    .v-card--flat {
-        box-shadow: 0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)
-    }
-    
-    .v-card--hover {
-        cursor: pointer;
-        -webkit-transition: all .4s cubic-bezier(.25,.8,.25,1);
-        transition: all .4s cubic-bezier(.25,.8,.25,1);
-        -webkit-transition-property: box-shadow;
-        transition-property: box-shadow
-    }
-    
-    .v-card--hover:hover {
-        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)
-    }
-    
-    .v-card__title {
-        -webkit-box-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 16px
-    }
-    
-    .v-card__title--primary {
-        padding-top: 24px
-    }
-    
-    .v-card__text {
-        padding: 16px;
-        width: 100%
-    }
-    
-    .v-card__actions {
-        -webkit-box-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: flex;
-        padding: 8px
-    }
-    
-    .v-card__actions .v-btn,.v-card__actions>* {
-        margin: 0
-    }
-    
-    .v-card__actions .v-btn+.v-btn {
-        margin-left: 8px
-    }
-    
-    .theme--light.v-sheet {
-        background-color: #fff;
-        border-color: #fff;
-        color: rgba(0,0,0,.87)
-    }
-    
-    .theme--dark.v-sheet {
-        background-color: #424242;
-        border-color: #424242;
-        color: #fff
-    }
-    
-    .v-sheet {
-        display: block;
-        border-radius: 2px;
-        position: relative;
-        -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
-        transition: .3s cubic-bezier(.25,.8,.5,1)
-    }
-    
-    .v-sheet--tile {
-        border-radius: 0
-    }</style>
-    </head>
-    <body style="">
-         <div data-app="true" class="application theme--light" id="app">
-                          
-                <div class="application--wrap">
-                
-                 <div data-v-477b291f="" data-v-e3189a58="" class="pt-5 v-card v-card--flat v-sheet v-sheet--tile theme--light">
-                   <div data-v-477b291f="" class="v-card__title mb-3">
-                     <div data-v-477b291f="" class="layout justify-center">
-                       <div data-v-477b291f="" class="layout column justify-center">
-                         <div data-v-477b291f="" class="flex xs12">
-                           <div data-v-477b291f="" style="text-align: justify;">
-                             <span data-v-477b291f="" id="text_type" style="font-weight: bold; color: black; font-size: 24px; width: 100%; display: inline-block;">留学生用户，出校授权有效！</span>
-                             </div>
-                           </div>
-                          <!--  <div data-v-477b291f="" class="flex xs12">
-                             <div data-v-477b291f="" style="text-align: justify;">
-                               <span data-v-477b291f="" style="font-weight: bold; color: red; font-size: 24px; width: 100%; display: inline-block;">
-                                “返校授权查询：请您补充完整您的返校交通信息”</span>
-                              </div>
-                            </div> -->
+    </style>
+  </head>
+  <body>
+    <div data-app="true" class="application theme--light" id="app">
+      <div class="application--wrap">
+        <div
+          data-v-477b291f=""
+          data-v-e3189a58=""
+          class="pt-5 v-card v-card--flat v-sheet v-sheet--tile theme--light"
+        >
+          <div data-v-477b291f="" class="v-card__title mb-3">
+            <div data-v-477b291f="" class="layout justify-center">
+              <div data-v-477b291f="" class="layout column justify-center">
+                <div data-v-477b291f="" class="flex xs12">
+                  <div data-v-477b291f="" style="text-align: justify;">
+                    <span
+                      data-v-477b291f=""
+                      id="text_type"
+                      style="
+                        font-weight: bold;
+                        color: black;
+                        font-size: 24px;
+                        width: 100%;
+                        display: inline-block;
+                      "
+                      >留学生用户，出校授权有效！</span
+                    >
+                  </div>
+                </div>
+                <!--  <div data-v-477b291f="" class="flex xs12">
+                     <div data-v-477b291f="" style="text-align: justify;">
+                       <span data-v-477b291f="" style="font-weight: bold; color: red; font-size: 24px; width: 100%; display: inline-block;">
+                        “返校授权查询：请您补充完整您的返校交通信息”</span>
+                      </div>
+                    </div> -->
+              </div>
+            </div>
+          </div>
+          <div data-v-477b291f="" role="list" class="v-list theme--light">
+            <hr data-v-477b291f="" class="v-divider theme--light" />
+            <!---->
+            <!---->
+            <!---->
+            <div data-v-477b291f="" role="listitem">
+              <div class="v-list__tile theme--light">
+                <div data-v-477b291f="" class="v-list__tile__action">
+                  <div data-v-477b291f="" class="layout">
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+                      <path
+                        fill="#757575"
+                        d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
+                      ></path>
+                    </svg>
+                    <span data-v-477b291f="" class="ml-2 mr-2"> 用户姓名</span>
+                  </div>
+                </div>
+                <div data-v-477b291f="" class="v-list__tile__content">
+                  <div data-v-477b291f="" class="v-list__tile__title">
+                    <div data-v-477b291f="" class="layout justify-end">
+                      <h2 data-v-477b291f="" id="user_name">Islam Md Hasan</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <div data-v-477b291f="" role="listitem">
+              <div class="v-list__tile theme--light">
+                <div data-v-477b291f="" class="v-list__tile__action">
+                  <div data-v-477b291f="" class="layout">
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+                      <path
+                        fill="#757575"
+                        d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z"
+                      ></path>
+                    </svg>
+
+                    <span data-v-477b291f="" class="ml-2 mr-2"> 登记类型</span>
+                  </div>
+                </div>
+                <div data-v-477b291f="" class="v-list__tile__content">
+                  <div
+                    data-v-477b291f=""
+                    class="v-list__tile__title warning--text"
+                  >
+                    <div data-v-477b291f="" class="layout justify-end">
+                      <h2 data-v-477b291f="" style="color: black;">
+                        研究生（硕士）
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <!---->
+            <div data-v-477b291f="" role="listitem">
+              <div class="v-list__tile theme--light">
+                <div data-v-477b291f="" class="v-list__tile__action">
+                  <div data-v-477b291f="" class="layout">
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+                      <path
+                        fill="#757575"
+                        d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z"
+                      ></path>
+                    </svg>
+
+                    <span data-v-477b291f="" class="ml-2 mr-2"> 登记时间</span>
+                  </div>
+                </div>
+                <div data-v-477b291f="" class="v-list__tile__content">
+                  <div
+                    data-v-477b291f=""
+                    class="v-list__tile__title primary--text"
+                  >
+                    <div data-v-477b291f="" class="layout justify-end">
+                      <h3 data-v-477b291f="" style="width: 180px;">
+                        <div data-v-43a209c8="" data-v-477b291f="" class="wrap">
+                          <div
+                            data-v-43a209c8=""
+                            id="box"
+                            style="transform: translateX(-166px);"
+                          >
+                            <div data-v-43a209c8="" id="marquee">
+                              2020-08-22 12:27:00
+                            </div>
+                            <div data-v-43a209c8="" id="copy">
+                              2020-08-22 12:27:00
+                            </div>
+                          </div>
+                          <div data-v-43a209c8="" id="node">
+                            2020-08-22 12:27:00
                           </div>
                         </div>
-                      </div>
-                      <div data-v-477b291f="" role="list" class="v-list theme--light">
-                       <hr data-v-477b291f="" class="v-divider theme--light">
-                       <!---->
-                       <!---->
-                       <!---->
-                       <div data-v-477b291f="" role="listitem">
-                         <div class="v-list__tile theme--light">
-                           <div data-v-477b291f="" class="v-list__tile__action">
-                             <div data-v-477b291f="" class="layout">
-                               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path fill="#757575" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
-</svg>
-                               <span data-v-477b291f="" class="ml-2 mr-2">
-                                 用户姓名</span>
-                               </div>
-                             </div>
-                             <div data-v-477b291f="" class="v-list__tile__content">
-                               <div data-v-477b291f="" class="v-list__tile__title">
-                                 <div data-v-477b291f="" class="layout justify-end">
-                                   <h2 data-v-477b291f="" id="user_name">Islam Md Hasan</h2>
-                                   </div>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                           <!---->
-                           <!---->
-                           <div data-v-477b291f="" role="listitem">
-                             <div class="v-list__tile theme--light">
-                               <div data-v-477b291f="" class="v-list__tile__action">
-                                 <div data-v-477b291f="" class="layout">
-                                   <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path fill="#757575" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z"></path>
-</svg>
-                                   
-                                   <span data-v-477b291f="" class="ml-2 mr-2">
-                                     登记类型</span>
-                                   </div>
-                                 </div>
-                                 <div data-v-477b291f="" class="v-list__tile__content">
-                                   <div data-v-477b291f="" class="v-list__tile__title warning--text">
-                                     <div data-v-477b291f="" class="layout justify-end">
-                                       <h2 data-v-477b291f="" style="color: black">
-                                         研究生（硕士）</h2>
-                                       </div>
-                                     </div>
-                                   </div>
-                                 </div>
-                               </div>
-                               <!---->
-                               <!---->
-                               <div data-v-477b291f="" role="listitem">
-                                 <div class="v-list__tile theme--light">
-                                   <div data-v-477b291f="" class="v-list__tile__action">
-                                     <div data-v-477b291f="" class="layout">
-                                       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path fill="#757575" d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z"></path>
-</svg>
-                                       
-                                       <span data-v-477b291f="" class="ml-2 mr-2">
-                                         登记时间</span>
-                                       </div>
-                                     </div>
-                                     <div data-v-477b291f="" class="v-list__tile__content">
-                                       <div data-v-477b291f="" class="v-list__tile__title primary--text">
-                                         <div data-v-477b291f="" class="layout justify-end">
-                                           <h3 data-v-477b291f="" style="width: 180px;">
-                                             <div data-v-43a209c8="" data-v-477b291f="" class="wrap">
-                                               <div data-v-43a209c8="" id="box" style="transform: translateX(-166px);">
-                                                 <div data-v-43a209c8="" id="marquee">2020-08-22 12:27:00 </div>
-                                                   <div data-v-43a209c8="" id="copy">2020-08-22 12:27:00 </div>
-                                                   </div>
-                                                   <div data-v-43a209c8="" id="node">2020-08-22 12:27:00 </div>
-                                                   </div>
-                                                 </h3>
-                                               </div>
-                                             </div>
-                                           </div>
-                                         </div>
-                                       </div>
-                                       <!---->
-                    <div data-v-35837915="" class="layout justify-center">
-                                   
- <button data-v-35837915="" type="button" class="v-btn theme--light primary" id="qr">
-                                       <div class="v-btn__content">
-                                        
-                                         前往个人二维码</div>
-                                       </button>
-                                     </div>
-                                     <!---->
-             
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <div data-v-35837915="" class="layout justify-center">
+              <button
+                data-v-35837915=""
+                type="button"
+                class="v-btn theme--light primary"
+                id="qr"
+              >
+                <div class="v-btn__content">
+                  前往个人二维码
+                </div>
+              </button>
+            </div>
+            <!---->
+          </div>
+          <div
+            data-v-477b291f=""
+            class="v-dialog__container"
+            style="display: block;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script charset="utf-8">
+      function getTime() {
+        var now = new Date();
+        var year = now.getFullYear(); //得到年份
+        var month = 1 + now.getMonth(); //得到月份
+        if (month < 10) month = "0" + month;
+        var date = now.getDate(); //得到日期
+        if (date < 10) date = "0" + date;
+        var hour = now.getHours(); //得到小时
+        if (hour < 10) hour = "0" + hour;
+        var minu = now.getMinutes(); //得到分钟
+        if (minu < 10) minu = "0" + minu;
+        var sec = now.getSeconds(); //得到秒
+        if (sec < 10) sec = "0" + sec;
+        return (
+          year +
+          "-" +
+          month +
+          "-" +
+          date +
+          " " +
+          hour +
+          ":" +
+          minu +
+          ":" +
+          sec +
+          " "
+        );
+      }
 
-                                     </div>
-                                     <div data-v-477b291f="" class="v-dialog__container" style="display: block;">
-                                     </div>
-                                   </div>
-                                 </div>
-                               </div>
-<script>
-    function getTime(){
-	var now = new Date();
-          var year = now.getFullYear(); //得到年份
-          var month = 1 + now.getMonth();//得到月份
-          if(month < 10) month = '0'+month;
-          var date = now.getDate();//得到日期
-          if(date < 10) date = '0'+date;
-          var hour = now.getHours();//得到小时
-          if(hour < 10) hour = '0'+hour;
-         var minu = now.getMinutes();//得到分钟
-         if(minu < 10) minu = '0'+minu;
-         var sec = now.getSeconds();//得到秒
-         if(sec < 10) sec = '0'+sec;
-         return year+'-'+month+'-'+date+' '+hour+':'+minu+':'+sec+' ';
-}
-
-
-function GetRequest() {
-    var url = location.search; //获取url中"?"符后的字串
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-        var str = url.substr(1);
-        strs = str.split("&");
-        for(var i = 0; i < strs.length; i ++) {
-            theRequest[strs[i].split("=")[0]]=decodeURI(strs[i].split("=")[1]);
+      function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+          var str = url.substr(1);
+          strs = str.split("&");
+          for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = decodeURI(
+              strs[i].split("=")[1]
+            );
+          }
         }
-    }
-    return theRequest;
-} 
-var Request =GetRequest();
-var text_type = parseInt(Request["type"]);
-now = getTime();
-document.getElementById('marquee').innerHTML = now;
-document.getElementById('copy').innerHTML = now;
-document.getElementById('node').innerHTML = now;
-document.getElementById('user_name').innerHTML = Request["name"];
-if(text_type == 0)
-	document.getElementById('text_type').innerHTML = "留学生用户，出校授权有效！";
-else
-	document.getElementById('text_type').innerHTML = "留学生用户，入校授权有效！";
-var area=document.getElementById("box");
-var regObj = /\d+/;
-var tmpX = parseInt(regObj.exec(area.style.transform)[0])*-1;
-var speed = 30;
-var delay = 200;
-function starMove(){
-  time=setInterval("scroll()",speed);
-}
-function scroll(){
-  if(tmpX==-220){
-  	tmpX = 0;
-	area.style.transform = "translateX(" + tmpX +"px)";
-  clearInterval(time);
-  setTimeout("starMove()",delay);
-  }else{
- 	tmpX--;
- 	area.style.transform = "translateX(" + tmpX +"px)";
-  }
-}
-setTimeout("starMove()",delay);
-
-
-
-     </script>
-                             
-                             
-
-</body></html>
+        return theRequest;
+      }
+      var Request = GetRequest();
+      var text_type = parseInt(Request["type"]);
+      now = getTime();
+      document.getElementById("marquee").innerHTML = now;
+      document.getElementById("copy").innerHTML = now;
+      document.getElementById("node").innerHTML = now;
+      document.getElementById("user_name").innerHTML = Request["name"];
+      if (text_type == 0)
+        document.getElementById("text_type").innerHTML =
+          "留学生用户，出校授权有效！";
+      else
+        document.getElementById("text_type").innerHTML =
+          "留学生用户，入校授权有效！";
+      var area = document.getElementById("box");
+      var regObj = /\d+/;
+      var tmpX = parseInt(regObj.exec(area.style.transform)[0]) * -1;
+      var speed = 30;
+      var delay = 200;
+      function starMove() {
+        time = setInterval("scroll()", speed);
+      }
+      function scroll() {
+        if (tmpX == -220) {
+          tmpX = 0;
+          area.style.transform = "translateX(" + tmpX + "px)";
+          clearInterval(time);
+          setTimeout("starMove()", delay);
+        } else {
+          tmpX--;
+          area.style.transform = "translateX(" + tmpX + "px)";
+        }
+      }
+      setTimeout("starMove()", delay);
+    </script>
+  </body>
+</html>
