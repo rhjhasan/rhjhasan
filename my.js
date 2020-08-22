@@ -37,7 +37,7 @@ document.getElementById('user_name').innerHTML = Request["name"];
 if(text_type == 0)
 	document.getElementById('text_type').innerHTML = "留学生用户，出校授权有效！";
 else
-	document.getElementById('text_type').innerHTML = "留学生用户，授权有效！";
+	document.getElementById('text_type').innerHTML = "留学生用户，入校授权有效！";
 var area=document.getElementById("box");
 var regObj = /\d+/;
 var tmpX = parseInt(regObj.exec(area.style.transform)[0])*-1;
