@@ -28,7 +28,7 @@ function GetRequest() {
     return theRequest;
 } 
 var Request =GetRequest();
-var text_type = 0;
+var text_type = Request["text_type"];
 now = getTime();
 document.getElementById('marquee').innerHTML = now;
 document.getElementById('copy').innerHTML = now;
